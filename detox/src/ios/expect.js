@@ -58,6 +58,13 @@ class TapAction extends Action {
   }
 }
 
+class TapOverAction extends Action {
+  constructor() {
+    super();
+    this._call = invoke.callDirectly(GreyActions.actionForTapOver());
+  }
+}
+
 class TapAtPointAction extends Action {
   constructor(value) {
     super();
