@@ -592,6 +592,20 @@ class GREYActions {
     };
   }
 
+  /*Returns an action that taps over an element at the activation point of the element.
+  
+  @return A GREYAction to tap over an element.*/
+  static actionForTapOver() {
+    return {
+      target: {
+        type: "Class",
+        value: "GREYActions"
+      },
+      method: "actionForTapOver",
+      args: []
+    };
+  }
+
   /*Returns an action that taps on an element at the specified @c point.
   
   @param point The point that should be tapped. It must be in the coordinate system of the

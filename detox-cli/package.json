@@ -1,5 +1,5 @@
 {
-  "name": "detox-cli",
+  "name": "parkandpedal-detox-cli",
   "version": "10.0.7",
   "description": "detox CLI tool wrapper",
   "main": "index.js",

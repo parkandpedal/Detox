@@ -3,7 +3,7 @@ const cp = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-const detoxPath = path.join(process.cwd(), 'node_modules/detox');
+const detoxPath = path.join(process.cwd(), 'node_modules/parkandpedal-detox');
 const detoxPackageJsonPath = path.join(detoxPath, 'package.json');
 
 if (fs.existsSync(detoxPackageJsonPath)) {
@@ -11,12 +11,12 @@ if (fs.existsSync(detoxPackageJsonPath)) {
   if (process.platform === 'win32') {
     const result = cp.spawnSync(
       'cmd',
-      ['/c', path.join(process.cwd(), 'node_modules/.bin/detox.cmd')].concat(process.argv.slice(2)),
+      ['/c', path.join(process.cwd(), 'node_modules/.bin/parkandpedal-detox.cmd')].concat(process.argv.slice(2)),
       { stdio: 'inherit' });
     process.exit(result.status);
   } else {
     const result = cp.spawnSync(
-      path.join(process.cwd(), 'node_modules/.bin/detox'),
+      path.join(process.cwd(), 'node_modules/.bin/parkandpedal-detox'),
       process.argv.slice(2),
       { stdio: 'inherit' });
     process.exit(result.status);
