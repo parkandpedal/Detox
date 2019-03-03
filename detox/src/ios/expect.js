@@ -300,6 +300,10 @@ class Element {
   async tap() {
     return await new ActionInteraction(this, new TapAction()).execute();
   }
+  async tapOver() {
+    return await new ActionInteraction(this, new TapOverAction()).execute();
+  }
+
   async tapAtPoint(value) {
     return await new ActionInteraction(this, new TapAtPointAction(value)).execute();
   }
